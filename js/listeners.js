@@ -185,4 +185,16 @@ if( pantalla == "seleccion"){
 	if (cx >= 0.75 * w && cx<= w * 0.85 && cy >= 0.16* h  && cy <= (30/576 * h) + 0.16 * h){player(players)};
 	//if (cx >= 0.75 * w && cx<= w * 0.85 && cy >= 0.16* h  && cy <= (30/576 * h) + 0.16 * h && players === 2 && Math.floor(frames /2) !== frames /2){players = 1; console.log(cx,cy,w)};
 
-}};
+}
+
+if (pantalla == "inicio"){
+	cx = event.pageX;
+	cy = event.pageY;
+
+	if (cx >= 0 && cx <= w && cy >= 0 && cy <= h && frames >= 180){
+		pantalla ="tranceUno"
+		frames = 0;
+	}
+}
+
+};
