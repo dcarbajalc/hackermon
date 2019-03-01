@@ -1,0 +1,10 @@
+ canvas {
+  border: 1px solid black;
+};
+ 
+ @font-face ={
+  	  font-family: 'Solidpkm';
+	  src: local('Solidpkm'), url ("/fonts/Solidpkm.ttf") format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+  }
