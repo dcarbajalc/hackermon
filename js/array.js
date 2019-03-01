@@ -8,7 +8,7 @@
   var imgTrr = new Image();
   imgTrr.src ='sprites/battlebackground.png';
   var imgTrainer = new Image();
-  imgTrainer.src = 'sprites/trainer.png';
+  imgTrainer.src = 'sprites/red.png';
   var imgLogotipo = new Image();
   imgLogotipo.src = 'sprites/logo.png';
 

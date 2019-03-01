@@ -60,7 +60,7 @@ drawPantallaInicio = function(){
       let height = escala * sheight;
       let width = escala * swidth;
       var imgTrainer = new Image();
-      imgTrainer.src = 'sprites/trainer.png';
+      imgTrainer.src = 'sprites/red.png';
       ctx.drawImage(imgTrainer, x,y, width, height);
   };
 
