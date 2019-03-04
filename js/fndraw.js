@@ -359,7 +359,7 @@ drawBattle = function(){
     if (frames > 4*fps && frames <= 7*fps && (subPantalla == 0)){writeDialog ("Blue chooses "+ arrayPokemon[pokemonBlue].Name + "!!!")}
     if (frames >= 7*fps && subPantalla == 0 ) {subPantalla = 1};
 
-    if (subPantalla == 1){pokeBlue.draw(0.5*w,0.2* h, w * 0.5, h * 0.3,1); blueBarra.drawStatic("E");
+    if (subPantalla == 1 && players == 1){pokeBlue.draw(0.5*w,0.2* h, w * 0.5, h * 0.3,1); blueBarra.drawStatic("E");
         pokeRed.draw(0,h * 0.4, w * 0.5, h * 0.39,3);redBarra.drawStatic("E");
         var canvasSelectAtaque = document.getElementById('canvas');
         var ctxSelectAtaque = canvasSelectAtaque.getContext('2d');
@@ -377,6 +377,42 @@ drawBattle = function(){
         ctxSelectAtaqueHP.font ="35px Georgia"
         ctxSelectAtaqueHP.fillText("HP: " + pokeRed.hp +"/"+ redBarra.maxHP,w*0.5,h*0.93);
     } ;
+
+    if (subPantalla == 1 && players == 2){pokeBlue.draw(0.5*w,0.2* h, w * 0.5, h * 0.3,1); blueBarra.drawStatic("E");
+    pokeRed.draw(0,h * 0.4, w * 0.5, h * 0.39,3);redBarra.drawStatic("E");
+    var canvasSelectAtaque = document.getElementById('canvas');
+    var ctxSelectAtaque = canvasSelectAtaque.getContext('2d');
+    ctxSelectAtaque.fillStyle = "black";
+    ctxSelectAtaque.font ="12px Georgia"
+    //ctxSelectAtaque.fillText("Select you Atack:",w*0.1,h*0.83);
+    ctxSelectAtaque.fillText("Q - " + pokeRed.move1,w*0.1,h*0.85);
+    ctxSelectAtaque.fillText("W - " + pokeRed.move2,w*0.1,h*0.88);
+    ctxSelectAtaque.fillText("E - " + pokeRed.move3,w*0.1,h*0.91);
+    ctxSelectAtaque.fillText("R - " + pokeRed.move4,w*0.1,h*0.94);
+    var canvasSelectAtaqueHP = document.getElementById('canvas');
+    var ctxSelectAtaqueHP = canvasSelectAtaqueHP.getContext('2d');
+    ctxSelectAtaqueHP.fillStyle = "black";
+    ctxSelectAtaqueHP.font ="35px Georgia"
+    ctxSelectAtaqueHP.fillText("Red HP: " + pokeRed.hp +"/"+ redBarra.maxHP,w*0.5,h*0.93);
+} ;
+
+if (subPantalla == 1.5 && players == 2){pokeBlue.draw(0.5*w,0.2* h, w * 0.5, h * 0.3,1); blueBarra.drawStatic("E");
+pokeRed.draw(0,h * 0.4, w * 0.5, h * 0.39,3);redBarra.drawStatic("E");
+var canvasSelectAtaque = document.getElementById('canvas');
+var ctxSelectAtaque = canvasSelectAtaque.getContext('2d');
+ctxSelectAtaque.fillStyle = "black";
+ctxSelectAtaque.font ="12px Georgia"
+//ctxSelectAtaque.fillText("Select you Atack:",w*0.1,h*0.83);
+ctxSelectAtaque.fillText("Q - " + pokeBlue.move1,w*0.1,h*0.85);
+ctxSelectAtaque.fillText("W - " + pokeBlue.move2,w*0.1,h*0.88);
+ctxSelectAtaque.fillText("E - " + pokeBlue.move3,w*0.1,h*0.91);
+ctxSelectAtaque.fillText("R - " + pokeBlue.move4,w*0.1,h*0.94);
+var canvasSelectAtaqueHP = document.getElementById('canvas');
+var ctxSelectAtaqueHP = canvasSelectAtaqueHP.getContext('2d');
+ctxSelectAtaqueHP.fillStyle = "black";
+ctxSelectAtaqueHP.font ="35px Georgia"
+ctxSelectAtaqueHP.fillText(" Blue HP: " + pokeBlue.hp +"/"+ blueBarra.maxHP,w*0.5,h*0.93);
+} ;
 
     if (subPantalla == 2 && pokeRed.speed >= pokeBlue.speed) {
     if (frames >= 0 && frames < fps * 4 && turno >=1 ){pokeRed.drawAnimado (0,h * 0.4, w * 0.5, h * 0.39,2);}
@@ -655,4 +691,4 @@ if (subPantalla == 9){
 
 };
 
-}
+};

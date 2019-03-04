@@ -21,8 +21,9 @@ window.onload = function() {
 		if (pantalla === "tranceDos"){
 			drawTranceDos();}
 		if (pantalla === "battle"){
-			drawBattle();
-		}
+			drawBattle();}
+
+
 			
 	},1000/fps )
 

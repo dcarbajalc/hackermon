@@ -11,33 +11,77 @@ addEventListener('keydown', function(event){
 		frames = 0;
 };
 
-// el listener cuando seleccionas ataque:
+// el listener cuando seleccionas ataque de 1p:
 
-if(event.keyCode === 81 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 ){
+if(event.keyCode === 81 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 && players == 1){
 	frames = 0; 
 	movtoRed = 1; turno ++; subPantalla = 2; movtoBlue = Math.floor((Math.random() * 4) + 1 )
 	};	
 
-if(event.keyCode === 87 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 ){
+if(event.keyCode === 87 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 && players == 1 ){
 	frames = 0; 
 	movtoRed = 2; turno ++; subPantalla = 2; movtoBlue = Math.floor((Math.random() * 4) + 1 )
 	};
 	
-if(event.keyCode === 69 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 ){
+if(event.keyCode === 69 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 &&  players == 1){
 	frames = 0; 
 	movtoRed = 3; turno ++; subPantalla = 2; movtoBlue = Math.floor((Math.random() * 4) + 1 )
 	};	
 	
-if(event.keyCode === 82 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 ){
+if(event.keyCode === 82 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 &&  players == 1){
 	frames = 0; 
 	movtoRed = 4; turno ++; subPantalla = 2; movtoBlue = Math.floor((Math.random() * 4) + 1 )
 	};	
-if(event.keyCode === 84 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 ){
+if(event.keyCode === 84 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 &&  players == 1){
 	frames = 0;
 	hpRed = 0; 
 	movtoRed = 4; subPantalla = 9; movtoBlue = Math.floor((Math.random() * 4) + 1 )
 	};	
+
+// el listener que selecciona ataque Red cuando 2p:
+
+if(event.keyCode === 81 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 && players == 2){
+	frames = 0; 
+	movtoRed = 1; turno ++; subPantalla = 1.5;
+	};	
+
+if(event.keyCode === 87 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 && players == 2 ){
+	frames = 0; 
+	movtoRed = 2; turno ++; subPantalla = 1.5;
+	};
 	
+if(event.keyCode === 69 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 &&  players == 2){
+	frames = 0; 
+	movtoRed = 3; turno ++; subPantalla = 1.5;
+	};	
+	
+if(event.keyCode === 82 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1 &&  players == 2){
+	frames = 0; 
+	movtoRed = 4; turno ++; subPantalla = 1.5; 
+	};
+
+// El listener para seleccionar ataque de Blue:
+
+if(event.keyCode === 81 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1.5 && players == 2 && frames >= fps){
+	frames = 0; 
+	movtoBlue = 1; subPantalla = 2;
+	};	
+
+if(event.keyCode === 87 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1.5 && players == 2 && frames >= fps){
+	frames = 0; 
+	movtoBlue = 2;subPantalla = 2;
+	};
+	
+if(event.keyCode === 69 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1.5 &&  players == 2 && frames >= fps){
+	frames = 0; 
+	movtoBlue = 3;subPantalla = 2;
+	};	
+	
+if(event.keyCode === 82 && pantalla == "battle" && pokemonRed >0 && pokemonRed <= 9 && pokemonBlue > 0 && pokemonBlue <= 9  && subPantalla == 1.5 &&  players == 2 && frames >= fps){
+	frames = 0; 
+	movtoBlue = 4; subPantalla = 2; 
+	};
+
 
 	// El listener activo durante la subPantalla 2:
 
