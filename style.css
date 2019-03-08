@@ -1,10 +1,18 @@
- canvas {
-  border: 1px solid black;
-};
- 
- @font-face ={
-  	  font-family: 'Solidpkm';
-	  src: local('Solidpkm'), url ("/fonts/Solidpkm.ttf") format('truetype');
-	  font-weight: normal;
-	  font-style: normal;
-  }
+body{
+	background-image: url("sprites/ballsy.jpg");
+	margin: 12px
+}
+
+.canvas {
+
+	border: 1px solid black;
+	background-color: white;
+	
+  };
+
+
+
+
+
+
+
